@@ -2,28 +2,186 @@
 // VARIABLES
 // ######################################
 
+//breakpoints
+$laptop:1280px;
+
+
 //TYPE
-$fontstack: serif;
+$styled-serif: "Appareo-ExtraLight", serif;
+$serif: serif;
+$sans-serif: "Helvetica", "Arial", sans-serif;
 
 //COLOR
-$blue: blue;
-$tan: tan;
+$aqua: #96C7CC;
+$green: #5A7D7C;
+$light-tan: #F0FFDB;
+$dark-tan: #D3E6A5;
 $grey: grey;
 $gray: $grey; // b/c somtimes I'm stupid
+$brown:#3B3126;
+
+// NAV
+$clockheight:57px;
 
 // ######################################
 // MIX-INS
 // ######################################
+
+@keyframes arrow-pulse-animation {
+	// Make the keep=reading-circles pulse
+	0%  {margin-left:0px;}
+	50% {margin-left:-3px;}
+	100% {margin-left:0px;}
+}
+
+
+@mixin arrowpulse($time){
+	animation-name: arrow-pulse-animation;
+	animation-duration: $time;
+	animation-iteration-count:infinite;
+	-moz-animation-name: arrow-pulse-animation;
+	-moz-animation-duration: $time;
+	-moz-animation-iteration-count:infinite;
+	-o-animation-name: arrow-pulse-animation;
+	-o-animation-duration: $time;
+	-o-animation-iteration-count:infinite;
+	-webkit-animation-name: arrow-pulse-animation;
+	-webkit-animation-duration: $time;
+	-webkit-animation-iteration-count:infinite;
+}
 
 
 // ######################################
 // BASE
 // ######################################
 
-body{
-	background-color:$tan;
+@font-face {
+	font-family: 'Appareo-ExtraLight';
+	src: url('appareoextralight.eot');
+	src: url('appareoextralight.eot?#iefix') format('embedded-opentype'),
+		 url('appareoextralight.woff') format('woff'),
+		 url('appareoextralight.ttf') format('truetype'),
+		 url('appareoextralight.svg#appareoextralight') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
+// .chapter{display:none;}
+
+body{
+	background-color:$brown;
+}
+
+p{font-family:$serif;}
+.chapter{font-family:$styled-serif;}
+img.drawn-panel{
+	width:100%;
+}
+
+.footnote{
+	font-weight:bold;
+	font-family:$sans-serif;
+	font-size: 10px;
+}
+
+// ######################################
+// EASTLAND CLOCK BAR
+// ######################################
+
+.eastland-clock-bar-outer{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	box-shadow:0 2px 2px rgba(0,0,0,.5);
+	background-color:$dark-tan;
+	z-index:1031;
+	margin-top:-80px;
+	transition:margin .2s ease;
+	overflow:hidden;
+	height:77px;
+
+	&.active{
+		margin-top:0;
+		transition:margin .2s ease;
+	}
+
+	#clock{
+		margin: 10px auto 0 auto;
+	    height: $clockheight;
+	    img{
+	    	height:$clockheight;
+	    	width: $clockheight;
+	    }
+	}
+
+	.eastland-clock-bar-inner{
+		// height:90px;
+		max-width: 1000px;
+		margin:0 auto;
+	}
+	
+	.chapter{
+		padding:0;
+		margin:0;
+		line-height: 2.6em;
+		display:block;
+	}
+	
+	.img-wrapper{
+		position: relative;
+	}
+	
+	#pointer{
+		color:red;
+		position: absolute;
+		font-size: 12px;
+		top:64%;
+		left:10%;
+		@include arrowpulse(2s);
+
+	}
+
+	.text-wrapper{
+		padding:10px;
+	}
+
+	
+}
+
+// ######################################
+// NEWSPAPERS
+// ######################################
+
+
+.newspapers-outer{
+	&>div{
+		height:500px;
+		width:100%;
+		overflow: hidden;
+		border:2px solid black;
+		border-left:none;
+		border-right:none;
+	}
+	
+}
+
+// ######################################
+// LEADERBOARD
+// ######################################
+
+
+.graphic-novel-advert-wrapper{
+	background-color:white;
+	border-bottom:2px solid $dark-tan;
+	text-align:center;
+	padding:25px 0;
+	margin: 0 0 25px 0;
+	p{
+		font-family:$sans-serif;
+		color:$grey;
+	}
+}
 
 
 // ######################################
@@ -32,9 +190,11 @@ body{
 
 
 
-
+@media all and (max-width:$laptop){
+	.container{max-width:1000px;}
+}
 
 
 @media all and (max-width:767px){
-	
+	.chapter{display:block;}
 }
