@@ -1,39 +1,200 @@
 {% extends "_base.html" %}
 
+{% macro graphictext(id, border_caption, classes, ident) %}
+{#######################################}
+{# MACRO GOES HERE #}
+{#######################################}
+{% endmacro %}
+
+{% macro breaker() %}
+<hr>
+{% endmacro%}
+
+{% macro footnote(number) %}
+<sup class="footnote">{{ number }}</sup>
+{% endmacro%}
+
+
 {% block content %}
+{% include "_eastland-clock-bar.html" %}
+{% include "_ad-leaderboard.html" %}
+
+<section class="newspapers-outer">
+    <div data-parallax="scroll" data-image-src="newspapers/pager1.jpg">
+        <!-- <img src="newspapers/pager1.jpg" /> -->
+    </div>
+    <div>
+        <div style="width:100%;height:100%" class="imgLiquidFill">
+            <img src="newspapers/newspage1.jpg" />
+        </div>
+    </div>
+    <div data-parallax="scroll" data-image-src="newspapers/pager2.jpg">
+        <!-- <img src="newspapers/pager2.jpg" /> -->
+    </div>
+    <div>
+        <div  style="width:100%;height:100%"  class="imgLiquidFill">
+            <img src="newspapers/newspage2.jpg" />
+        </div>
+    </div>
+    <div data-parallax="scroll" data-image-src="newspapers/pager3.jpg">
+        <!-- <img src="newspapers/pager3.jpg" /> -->
+    </div>
+    <div>
+        <div style="width:100%;height:100%"  class="imgLiquidFill">
+            <img src="newspapers/newspage3.jpg" />
+        </div>
+    </div>
+    
+</section>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             {% include "_social_row.html" %}
-            <h1 itemprop="headline">Welcome to Tarbell!</h1>
+            <h1 itemprop="headline"></h1>
             <p>Brought to you by <span itemprop="author">the Chicago Tribune News Apps team</span></p>
-            <p>Updated last <span itemprop="datePublished">July 15, 2014</span></p>
+            <p>Updated last <span itemprop="datePublished">DATE DATE DATE</span></p>
         </div>
     </div>
 
+    <section id="intro">
+        <p>Western Electric employees gathered at the Chicago River on South Water Street — later renamed Wacker Drive — to board one of three steamships reserved to take them across Lake Michigan to the annual company picnic  in Michigan City, Ind.{{ footnote("1") }} Those boarding the S.S. Eastland soon would find themselves in an overturned ship fighting for their lives in polluted river water.</p>
+        <p>In just minutes, 844 of the estimated 2,500 people on board{{ footnote("2") }} would lose the fight, including 22 entire families and four members of the Eastland’s crew.</p>
+        <p>This non-fiction illustrated narrative strives to recreate the story of those involved in the disaster through eyewitness accounts, oral histories, news reports and public records.</p>
+    </section>
+    <section id="chapter1">
+        <h2 class='chapter'>Watchers on the dock</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="drawn-panel" src="01-eastland-final.jpg" />
+            </div>       
+            <div class="col-md-6">
+                <img class="drawn-panel" src="02-03-eastland-final.jpg" />
+            </div>                
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="drawn-panel" src="04-eastland-final.jpg" />
+            </div>       
+            <div class="col-md-6">
+                <img class="drawn-panel" src="05-eastland-final.jpg" />
+            </div>                
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img class="drawn-panel" src="06-eastland-final.jpg" />
+                <img class="drawn-panel" src="07-08-eastland-final.jpg" />
+                <img class="drawn-panel" src="09-10-eastland-final.jpg" />
+            </div>     
+        </div>
+        {{ breaker() }}
+        <h2 class='chapter'>Aboard the ship</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <img class="drawn-panel" src="12-13-eastland-final.jpg" />
+            </div>       
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+            <img class="drawn-panel" src="14-15-eastland-final.jpg" />
+        </div> 
+    </div>
+    <div class="row">
+       <div class="col-md-12">
+        <img class="drawn-panel" src="16-eastland-final.jpg" />
+    </div> 
+</div>
+{{ breaker() }}
+<h2 class="chapter">Shifting balance</h2>
+<p><strong>7:00 A.M.: </strong>As the ship nears capacity, it begins to shift with the movement of the crowd. Passengers congregate along the dockside railings waving to friends while the ship leans farther and farther.</p>
+<div class="row">
+   <div class="col-md-12">
+    <img class="drawn-panel" src="17-eastland-final.jpg" />
+</div> 
+</div>
+<div class="row">
+   <div class="col-md-12">
+    <img class="drawn-panel" src="18-eastland-final.jpg" />
+</div> 
+</div>
+<div class="row">
+   <div class="col-md-12">
+    <img class="drawn-panel" src="19-eastland-final.jpg" />
+</div> 
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <img class="drawn-panel" src="20-eastland-final.jpg" />
+    </div>       
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img class="drawn-panel" src="21-eastland-final.jpg" />
+    </div>  
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <img class="drawn-panel" src="22-eastland-final.jpg" />
+    </div>  
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <img class="drawn-panel" src="23-24-eastland-final.jpg" />
+    </div>
+    <img class="drawn-panel" src="25-eastland-final.jpg" />
+    <img class="drawn-panel" src="26-eastland-final.jpg" />
+    <img class="drawn-panel" src="27-eastland-final.jpg" />
+    <img class="drawn-panel" src="28-eastland-final.jpg" />
+    <img class="drawn-panel" src="29-eastland-final.jpg" />
+    <img class="drawn-panel" src="30-eastland-final.jpg" />
+    <img class="drawn-panel" src="31-eastland-final.jpg" />
+    <img class="drawn-panel" src="32-eastland-final.jpg" />
+    <img class="drawn-panel" src="33-eastland-final.jpg" />
+    <img class="drawn-panel" src="34-eastland-final.jpg" />
+    <img class="drawn-panel" src="35-eastland-final.jpg" />
+
+    <div class="row">
 
     </div>
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+
+    </div>
+
+
+
+
+</section>
+
+
+
 </div>
 
 {% endblock content %}
 
 {% block library_css %}
-    {{ super() }}
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 {% endblock library_css %}
 
 
-{% block library_scripts %}
-    {{ super() }}
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/imgLiquid-min.js"></script>
-    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
-    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-{% endblock library_scripts %}
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="js/imgLiquid-min.js"></script>
+<script type="text/javascript" src="js/jquery.unveil.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/parallax.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+{% endblock scripts %}
 
 {% block title %}
-
 100 years since the Eastland -- Chicago Tribune
-
 {% endblock title %}
+
