@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 
+
 {% macro graphictext(id, border_caption, classes, ident) %}
 {#######################################}
 {# MACRO GOES HERE #}
@@ -16,145 +17,134 @@
 
 
 {% block content %}
+{% include "_loading.html" %}
+
 {% include "_eastland-clock-bar.html" %}
 {% include "_ad-leaderboard.html" %}
 
-<section class="newspapers-outer">
-    <div data-parallax="scroll" data-image-src="newspapers/pager1.jpg">
-        <!-- <img src="newspapers/pager1.jpg" /> -->
-    </div>
-    <div>
-        <div style="width:100%;height:100%" class="imgLiquidFill">
-            <img src="newspapers/newspage1.jpg" />
-        </div>
-    </div>
-    <div data-parallax="scroll" data-image-src="newspapers/pager2.jpg">
-        <!-- <img src="newspapers/pager2.jpg" /> -->
-    </div>
-    <div>
-        <div  style="width:100%;height:100%"  class="imgLiquidFill">
-            <img src="newspapers/newspage2.jpg" />
-        </div>
-    </div>
-    <div data-parallax="scroll" data-image-src="newspapers/pager3.jpg">
-        <!-- <img src="newspapers/pager3.jpg" /> -->
-    </div>
-    <div>
-        <div style="width:100%;height:100%"  class="imgLiquidFill">
-            <img src="newspapers/newspage3.jpg" />
-        </div>
-    </div>
-    
+
+{% include "_splash.html" %}
+<section id="intro" class="intro-outer">
+    <div class='container'>
+        <div class="intro-inner">
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% include "_social_row.html" %}
+                    <h1 ></h1>
+
+                </div>
+            </div>
+            <p class='drop-cap lead'>Western Electric employees gathered at the Chicago River on South Water Street — later renamed Wacker Drive — to board one of three steamships reserved to take them across Lake Michigan to the annual company picnic  in Michigan City, Ind.{{ footnote("1") }} Those boarding the S.S. Eastland soon would find themselves in an overturned ship fighting for their lives in polluted river water. In just minutes, 844 of the estimated 2,500 people on board{{ footnote("2") }} would lose the fight, including 22 entire families and four members of the Eastland’s crew.</p>
+            <p class='lead'>This non-fiction illustrated narrative strives to recreate the story of those involved in the disaster through eyewitness accounts, oral histories, news reports and public records.</p>
+            <div class="byline">
+                <p class="author">By <a itemprop="author" href="mailto:rtuma@chicagotribune.com">Rick Tuma</a> and <a itemprop="author" href="www.twitter.com/ryanmarx">Ryan Marx</a></p>
+                <p class="organization" itemprop="publisher">Chicago Tribune</p>
+                <p class="pub-date" itemprop="datePublished">DATE DATE DATE</p>
+          </div>
+      </div>
+  </div>
 </section>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {% include "_social_row.html" %}
-            <h1 itemprop="headline"></h1>
-            <p>Brought to you by <span itemprop="author">the Chicago Tribune News Apps team</span></p>
-            <p>Updated last <span itemprop="datePublished">DATE DATE DATE</span></p>
-        </div>
-    </div>
 
-    <section id="intro">
-        <p>Western Electric employees gathered at the Chicago River on South Water Street — later renamed Wacker Drive — to board one of three steamships reserved to take them across Lake Michigan to the annual company picnic  in Michigan City, Ind.{{ footnote("1") }} Those boarding the S.S. Eastland soon would find themselves in an overturned ship fighting for their lives in polluted river water.</p>
-        <p>In just minutes, 844 of the estimated 2,500 people on board{{ footnote("2") }} would lose the fight, including 22 entire families and four members of the Eastland’s crew.</p>
-        <p>This non-fiction illustrated narrative strives to recreate the story of those involved in the disaster through eyewitness accounts, oral histories, news reports and public records.</p>
-    </section>
+
+
+<div class="container">
+
+
     <section id="chapter1">
         <h2 class='chapter'>Watchers on the dock</h2>
         <div class="row">
             <div class="col-md-6">
-                <img class="drawn-panel" src="01-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/01-eastland-final.jpg" />
             </div>       
             <div class="col-md-6">
-                <img class="drawn-panel" src="02-03-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/02-03-eastland-final.jpg" />
             </div>                
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img class="drawn-panel" src="04-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/04-eastland-final.jpg" />
             </div>       
             <div class="col-md-6">
-                <img class="drawn-panel" src="05-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/05-eastland-final.jpg" />
             </div>                
         </div>
         <div class="row">
             <div class="col-md-12">
-                <img class="drawn-panel" src="06-eastland-final.jpg" />
-                <img class="drawn-panel" src="07-08-eastland-final.jpg" />
-                <img class="drawn-panel" src="09-10-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/06-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/07-08-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/09-10-eastland-final.jpg" />
             </div>     
         </div>
         {{ breaker() }}
         <h2 class='chapter'>Aboard the ship</h2>
         <div class="row">
             <div class="col-md-12">
-                <img class="drawn-panel" src="12-13-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/12-13-eastland-final.jpg" />
             </div>       
         </div>
         <div class="row">
-           <div class="col-md-12">
-            <img class="drawn-panel" src="14-15-eastland-final.jpg" />
+         <div class="col-md-12">
+            <img class="drawn-panel" src="img/14-15-eastland-final.jpg" />
         </div> 
     </div>
     <div class="row">
-       <div class="col-md-12">
-        <img class="drawn-panel" src="16-eastland-final.jpg" />
+     <div class="col-md-12">
+        <img class="drawn-panel" src="img/16-eastland-final.jpg" />
     </div> 
 </div>
 {{ breaker() }}
 <h2 class="chapter">Shifting balance</h2>
 <p><strong>7:00 A.M.: </strong>As the ship nears capacity, it begins to shift with the movement of the crowd. Passengers congregate along the dockside railings waving to friends while the ship leans farther and farther.</p>
 <div class="row">
-   <div class="col-md-12">
-    <img class="drawn-panel" src="17-eastland-final.jpg" />
+ <div class="col-md-12">
+    <img class="drawn-panel" src="img/17-eastland-final.jpg" />
 </div> 
 </div>
 <div class="row">
-   <div class="col-md-12">
-    <img class="drawn-panel" src="18-eastland-final.jpg" />
+ <div class="col-md-12">
+    <img class="drawn-panel" src="img/18-eastland-final.jpg" />
 </div> 
 </div>
 <div class="row">
-   <div class="col-md-12">
-    <img class="drawn-panel" src="19-eastland-final.jpg" />
+ <div class="col-md-12">
+    <img class="drawn-panel" src="img/19-eastland-final.jpg" />
 </div> 
 </div>
 <div class="row">
     <div class="col-md-12">
-        <img class="drawn-panel" src="20-eastland-final.jpg" />
+        <img class="drawn-panel" src="img/20-eastland-final.jpg" />
     </div>       
 </div>
 
 <div class="row">
     <div class="col-md-6">
-        <img class="drawn-panel" src="21-eastland-final.jpg" />
+        <img class="drawn-panel" src="img/21-eastland-final.jpg" />
     </div>  
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <img class="drawn-panel" src="22-eastland-final.jpg" />
+        <img class="drawn-panel" src="img/22-eastland-final.jpg" />
     </div>  
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <img class="drawn-panel" src="23-24-eastland-final.jpg" />
+        <img class="drawn-panel" src="img/23-24-eastland-final.jpg" />
     </div>
-    <img class="drawn-panel" src="25-eastland-final.jpg" />
-    <img class="drawn-panel" src="26-eastland-final.jpg" />
-    <img class="drawn-panel" src="27-eastland-final.jpg" />
-    <img class="drawn-panel" src="28-eastland-final.jpg" />
-    <img class="drawn-panel" src="29-eastland-final.jpg" />
-    <img class="drawn-panel" src="30-eastland-final.jpg" />
-    <img class="drawn-panel" src="31-eastland-final.jpg" />
-    <img class="drawn-panel" src="32-eastland-final.jpg" />
-    <img class="drawn-panel" src="33-eastland-final.jpg" />
-    <img class="drawn-panel" src="34-eastland-final.jpg" />
-    <img class="drawn-panel" src="35-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/25-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/26-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/27-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/28-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/29-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/30-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/31-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/32-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/33-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/34-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/35-eastland-final.jpg" />
 
     <div class="row">
 
