@@ -7,8 +7,8 @@
 {#######################################}
 {% endmacro %}
 
-{% macro breaker() %}
-<hr>
+{% macro breaker(options) %}
+<hr class='breaker {{ options }}'>
 {% endmacro%}
 
 {% macro footnote(number) %}
@@ -31,19 +31,19 @@
             <div class="row">
                 <div class="col-md-12">
                     {% include "_social_row.html" %}
-                    <h1 ></h1>
-
                 </div>
             </div>
+
             <p class='drop-cap lead'>Western Electric employees gathered at the Chicago River on South Water Street — later renamed Wacker Drive — to board one of three steamships reserved to take them across Lake Michigan to the annual company picnic  in Michigan City, Ind.{{ footnote("1") }} Those boarding the S.S. Eastland soon would find themselves in an overturned ship fighting for their lives in polluted river water. In just minutes, 844 of the estimated 2,500 people on board{{ footnote("2") }} would lose the fight, including 22 entire families and four members of the Eastland’s crew.</p>
             <p class='lead'>This non-fiction illustrated narrative strives to recreate the story of those involved in the disaster through eyewitness accounts, oral histories, news reports and public records.</p>
+            {{ breaker("skinny") }}
             <div class="byline">
                 <p class="author">By <a itemprop="author" href="mailto:rtuma@chicagotribune.com">Rick Tuma</a> and <a itemprop="author" href="www.twitter.com/ryanmarx">Ryan Marx</a></p>
                 <p class="organization" itemprop="publisher">Chicago Tribune</p>
                 <p class="pub-date" itemprop="datePublished">DATE DATE DATE</p>
-          </div>
-      </div>
-  </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -55,12 +55,11 @@
     <section id="chapter1">
         <h2 class='chapter'>Watchers on the dock</h2>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <img class="drawn-panel" src="img/01-eastland-final.jpg" />
-            </div>       
-            <div class="col-md-6">
                 <img class="drawn-panel" src="img/02-03-eastland-final.jpg" />
-            </div>                
+            </div>       
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -73,8 +72,8 @@
         <div class="row">
             <div class="col-md-12">
                 <img class="drawn-panel" src="img/06-eastland-final.jpg" />
-                <img class="drawn-panel" src="img/07-08-eastland-final.jpg" />
-                <img class="drawn-panel" src="img/09-10-eastland-final.jpg" />
+                <img class="drawn-panel xout" src="img/07-08-eastland-final.jpg" />
+                <img class="drawn-panel" src="img/09-10-11-eastland-final.jpg" />
             </div>     
         </div>
         {{ breaker() }}
@@ -98,34 +97,27 @@
 <h2 class="chapter">Shifting balance</h2>
 <p><strong>7:00 A.M.: </strong>As the ship nears capacity, it begins to shift with the movement of the crowd. Passengers congregate along the dockside railings waving to friends while the ship leans farther and farther.</p>
 <div class="row">
- <div class="col-md-12">
-    <img class="drawn-panel" src="img/17-eastland-final.jpg" />
-</div> 
-</div>
-<div class="row">
- <div class="col-md-12">
-    <img class="drawn-panel" src="img/18-eastland-final.jpg" />
-</div> 
-</div>
-<div class="row">
- <div class="col-md-12">
-    <img class="drawn-panel" src="img/19-eastland-final.jpg" />
-</div> 
-</div>
-<div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <img class="drawn-panel" src="img/17-eastland-final.jpg" />
+    </div> 
+    </div>
+<div class='row'>
+    <div class="col-md-4">
+        <img class="drawn-panel" src="img/18-eastland-final.jpg" />
+    </div> 
+    <div class="col-md-4">
+        <img class="drawn-panel" src="img/19-eastland-final.jpg" />
+    </div> 
+    <div class="col-md-4">
         <img class="drawn-panel" src="img/20-eastland-final.jpg" />
     </div>       
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
         <img class="drawn-panel" src="img/21-eastland-final.jpg" />
-    </div>  
-</div>
-
-<div class="row">
-    <div class="col-md-12">
         <img class="drawn-panel" src="img/22-eastland-final.jpg" />
     </div>  
 </div>
