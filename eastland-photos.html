@@ -1,0 +1,99 @@
+{% extends "_base.html" %}
+
+
+{% macro graphictext(id, border_caption, classes, ident) %}
+{#######################################}
+{# MACRO GOES HERE #}
+{#######################################}
+{% endmacro %}
+
+{% macro breaker(options) %}
+<hr class='breaker {{ options }}'>
+{% endmacro%}
+
+{% macro footnote(number) %}
+<sup class="footnote">{{ number }}</sup>
+{% endmacro%}
+
+
+{% block content %}
+
+{% include "_loading.html" %}
+
+{% include "_ad-leaderboard.html" %}
+
+
+    <div id="photo-gallery-splash" class="splash-img-wrapper splash-text-wrapper">
+        <div style="width:100%;margin-top: -23px;height: 110%;"  class="imgLiquidFill">
+            <h1 class="splash-fade headline" itemprop="headline">DISASTER ON<br >THE EASTLAND</h1>
+            <h2 class="splash-fade dek">{{ photo_dek }}</h2>
+            <img class='red' src="img/newspapers/intro-red-4.jpg" />
+            <!-- <img src="img/newspapers/splash-faded.jpg" /> -->
+        </div>
+    </div><section id="intro" class="intro-outer">
+    <div class='container'>
+        <div class="intro-inner">
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% include "_social_row.html" %}
+                </div>
+            </div>
+
+            <p class='drop-cap lead'>{{ photo_chatter }}</p>
+
+            {{ breaker("skinny") }}
+            <div class='eastland-button-wrapper'>
+                <a href="index.html" class='eastland-button'>The Story</a>
+                <a href="eastland-photos.html" class='eastland-button active'>The Photos</a>
+            </div>
+            {{ breaker("skinny") }}
+<!--             <div class="byline">
+                <p class="author">By <a itemprop="author" href="mailto:rtuma@chicagotribune.com">Rick Tuma</a> and <a itemprop="author" href="www.twitter.com/ryanmarx">Ryan Marx</a></p>
+                <p class="organization" itemprop="publisher">Chicago Tribune</p>
+                <p class="pub-date" itemprop="datePublished">DATE DATE DATE</p>
+            </div>
+ -->
+        </div>
+    </div>
+</section>
+<section id="photos">
+<div class='container'>
+    {% for row in photos[1:] %}
+        <div class="eastland-gallery-module {{ row.vert }}">
+            <figure>
+                <img src="img/gallery/{{ row.filename }}" />
+                <figcaption class="credit">{{ row.credit }}</figcaption>
+                <figcaption>{{ row.caption }}</figcaption>
+            </figure>
+
+        </div>
+
+    {% endfor %}
+</div>
+</section>
+
+
+
+
+{% endblock content %}
+
+{% block library_css %}
+{{ super() }}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+{% endblock library_css %}
+
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="js/imgLiquid-min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+{% endblock scripts %}
+
+{% block title %}
+100 years since the Eastland -- Chicago Tribune
+{% endblock title %}
+

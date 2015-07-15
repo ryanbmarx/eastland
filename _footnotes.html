@@ -1,0 +1,11 @@
+<section id='footnotes'>
+<h3 class='chapter'>References</h3>
+<dl>
+{% for row in footnotes %}
+
+	<dt>{{ row.number|process_text() }}</dt>
+	<dd>{{ row.note|process_text() }}</dd>
+
+{% endfor%}
+</dl>
+</section>

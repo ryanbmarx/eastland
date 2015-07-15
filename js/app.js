@@ -1,10 +1,12 @@
+window.onload = function(e){
+		setTimeout(function(){
+		$('.loading-wrapper').fadeOut(500);
+		
+	}, 3000);
+}
 $(document).ready(function(){
 	console.log('Eastland is ready to go');
-	setTimeout(function(){
-		$('.loading-wrapper').fadeOut(500);
-	}, 2000);
 
-	
 // MAKE THE NEWSPAPER SECTION DRAWINGS FILL
     $(".imgLiquidFill").imgLiquid({
         fill: true,
@@ -14,6 +16,7 @@ $(document).ready(function(){
  
 var waypointsNAV = $("#chapter1").waypoint({
 		handler: function(direction) {
+			console.log('showing sticky nav');
 			if (direction == "down"){
 				console.log(direction, "hello");
 				$('.eastland-clock-bar-outer').addClass('active');
@@ -25,7 +28,7 @@ var waypointsNAV = $("#chapter1").waypoint({
 
 	});
 
-var waypointsChapters = $("#chapter1 .chapter").waypoint({
+var waypointsChapters = $(".chapter").waypoint({
 		handler: function(direction) {
 				var newTitle = this.element.innerHTML;
 				console.log("New title: "+ newTitle);
@@ -43,3 +46,8 @@ var waypointsSplash = $(".splash-img-wrapper").waypoint({
 	});
 
 });
+
+document.onload=function(){
+	$('.loading-wrapper').fadeOut(500);
+
+}

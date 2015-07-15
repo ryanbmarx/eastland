@@ -41,7 +41,7 @@ S3_BUCKETS = {
 # Default template variables
 DEFAULT_CONTEXT = {
     'name': 'eastland',
-    'title': "The Eastland Disaster's 100th Anniversary",
+    'title': "Eastland Disaster",
     'OMNITURE': {
             'domain': 'chicagotribune.com',
             'sitename': 'Chicago Tribune',
