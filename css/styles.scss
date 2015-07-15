@@ -74,12 +74,17 @@ $clockheight:57px;
 
 // .chapter{display:none;}
 
+.full-width{
+	padding:0 25px;
+	max-width:1300px;
+}
+
 hr.breaker{
     background: url("../img/breaker.png") top center no-repeat;
     border: none;
     background-size: 240px;
     padding-top: 17px;
-    padding-bottom: 17px;
+    padding-bottom: 8px;
     border: 0;
     border-top: none;
 }
@@ -93,6 +98,7 @@ p{
 	color:white;
 	font-size: 16px;
 	line-height:1.8em;
+
 }
 
 .chapter{
@@ -104,16 +110,34 @@ p{
 img.drawn-panel{
 	width:100%;
 	margin-bottom:25px;
+	margin-top:25px;
 }
 
 .footnote{
 	font-weight:bold;
 	font-family:$sans-serif;
 	font-size: 10px;
+	margin-left: -4px;
 }
 
 .xout{
 	border: 10px solid red;
+}
+
+.next-button{
+	display:block;
+	padding:15px 25px;
+	text-decoration:none;
+	background-color:$light-tan;
+	border:2px solid $dark-tan;
+	text-align:center;
+	font-size:18px;
+	border-radius:8px;
+}
+
+.next-button:hover{
+	background-color:$dark-tan;
+	text-decoration:none;
 }
 
 // ######################################
@@ -159,6 +183,7 @@ img.drawn-panel{
 		line-height: 2.6em;
 		text-align:left;
 		display:block;
+		color:black;
 	}
 	
 	.img-wrapper{
@@ -298,6 +323,7 @@ img.drawn-panel{
 }
 
 
+
 @media all and (max-width:767px){
 	.newspapers-outer > div {
 		height:350px;
@@ -314,7 +340,10 @@ img.drawn-panel{
 		padding-bottom:25px;
 	}
 
-
+	.full-width{
+		max-width:100%;
+		padding:0 15px;
+	}
 	.chapter{display:block;}
 }
 

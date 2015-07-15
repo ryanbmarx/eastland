@@ -11,9 +11,15 @@
 	
 	&.active{
 		display:block;
-		z-index:1000;
+		z-index:3000;
 	}
 	
+	.loading-inner{
+		width: 75%;
+		max-width: 320px;
+		margin:100px auto;
+	}
+
 	p{
 		font-family: sans-serif;
 		font-size: 14px;
