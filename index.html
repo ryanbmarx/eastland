@@ -33,11 +33,9 @@
                     {% include "_social_row.html" %}
                 </div>
             </div>
-
-            <p class='drop-cap lead'>Western Electric employees gathered at the Chicago River on South Water Street — later renamed Wacker Drive — to board one of three steamships reserved to take them across Lake Michigan to the annual company picnic  in Michigan City, Ind.{{ footnote("1") }} Those boarding the S.S. Eastland soon would find themselves in an overturned ship fighting for their lives in polluted river water. In just minutes, 844 of the estimated 2,500 people on board{{ footnote("2") }} would lose the fight, including 22 entire families and four members of the Eastland’s crew.</p>
-            <p class='lead'>This non-fiction illustrated narrative strives to recreate the story of those involved in the disaster through eyewitness accounts, oral histories, news reports and public records.</p>
+            {{ main_chatter|process_text() }}
             {{ breaker("skinny") }}
-                        <div class='eastland-button-wrapper'>
+            <div class='eastland-button-wrapper'>
                 <a href="index.html" class='eastland-button active'>The Story</a>
                 <a href="eastland-photos.html" class='eastland-button'>The Photos</a>
             </div>
@@ -58,7 +56,7 @@
 <div id ="chapter1" class="container">
 
 
-    <h2 class='chapter'>Watchers on the dock</h2>
+    <h2 class='chapter'>{{ chapter1_hede }}</h2>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -82,27 +80,27 @@
         </div>     
     </div>
     {{ breaker() }}
-    <h2 class='chapter'>Aboard the ship</h2>
-    <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolor error quas voluptas, doloribus recusandae nobis pariatur, nemo odit officiis commodi est incidunt obcaecati cupiditate sit voluptatem facere consectetur hic.</p>
+    <h2 class='chapter'>{{ chapter2_hede }}</h2>
+    <p class="drop-cap">{{ chapter2_chatter|process_text() }}</p>
     <div class="row">
         <div class="col-md-12">
             <img class="drawn-panel" src="img/12-13-eastland-CfinalY.jpg" />
         </div>       
     </div>
     <div class="row">
-       <div class="col-md-12">
+     <div class="col-md-12">
         <img class="drawn-panel" src="img/14-15-eastland-CfinalsY.jpg" />
     </div> 
 </div>
 <div class="row">
-   <div class="col-md-12">
+ <div class="col-md-12">
     <img class="drawn-panel" src="img/16-eastland-CfinalY.jpg" />
 </div> 
 </div>
 {{ breaker() }}
-<h2 class="chapter">Shifting balance</h2>
+<h2 class='chapter'>{{ chapter3_hede }}</h2>
 <p><strong>7:00 A.M.: </strong></p>
-<p  class="drop-cap">As the ship nears capacity, it begins to shift with the movement of the crowd. Passengers congregate along the dockside railings waving to friends while the ship leans farther and farther.</p>
+<p class="drop-cap">{{ chapter3_chatter|process_text() }}</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
@@ -131,9 +129,10 @@
             <img class="drawn-panel" src="img/22-eastland-CfinalY.jpg" />
         </div>  
     </div>
-    <p class="drop-cap">Boat is rocking. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero possimus, enim accusamus est pariatur corporis, itaque harum optio quo molestias. Cupiditate fugit omnis vitae distinctio ullam dolorem eos possimus debitis?</p>
+    <h4>{{ chapter4_hede }}</h4>
+    <p class="drop-cap">{{ chapter4_chatter}}</p>
     <div class="row">
-    <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
         <div class="col-md-10">
             <img class="drawn-panel" src="img/23-eastland-CfinalY.jpg" />
         </div>
@@ -142,8 +141,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <img class="drawn-panel" src="img/24-eastland-CfinalY.jpg" />
-<!--             <img class="drawn-panel" src="img/24-eastland-CfinalY-2.jpg" />
- -->
+        </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -173,7 +171,7 @@
     <p class="drop-cap">Because the interiors of the submerged half of the ship were twisted and full of debris, the divers moved slowly and cautiously to avoid snagging their air hoses and signal ropes. Without them them was no escape from the underwater tomb, and some divers had close calls.</p>
     <img class="drawn-panel" src="img/33-eastland-CfinalY.jpg" />
     <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis autem laborum odio, nesciunt, repellat cupiditate et ullam commodi aliquam a, iure sunt ratione placeat numquam tenetur reprehenderit velit consequatur. Commodi!</p>
-    <img class="drawn-panel" src="img/34-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/34-eastland-CfinalY.jpg" />
     <img class="drawn-panel" src="img/35-eastland-CfinalY.jpg" />
 
 
@@ -181,13 +179,13 @@
     <h2 class="chapter">Caring for the dead</h2>
     <p class="drop-cap">Hundreds of dead were transported to the National Guard Armory — which was empty at the time. Morticians raced to embalm the bodies before it was impossible to do so.{{ footnote(8) }}</p>
 
-    <img class="drawn-panel" src="img/36-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/36-eastland-CfinalY.jpg" />
 
     <p class="drop-cap">Many of the victims lived in Cicero. Many homes were draped with black crepe as visitations were often held at home., as was the custom at the time. It was normal to walk into an open front door to view the body in a living room or parlor. Some houses were empty because the entire family had perished in the river.</p>
     <p>To the disgust and dismay of many, pick pockets and thieves, posing as friends of the deceased, would steal jewelry off the bodies along with untended household items. Loan sharks posing as representatives of various relief funds tricked bereaved wives to sign fake 'receipts' that were actually contracts binding the signers to pay exorbitant rates of interest.{{ footnote("needone")}}</p>
     <p>The Health Department, fearing a typhoid epidemic brought on by those who had swallowed polluted Chicago River water, sent physicians and nurses to innoculate surivors even if it meant interupting visiations.{{ footnote(10) }}</p>
     <p>Wednesday, July 28, 1915 was the day that the majority of the victims were laid to rest.{{ footnote("needone")}}</p>
-    <img class="drawn-panel" src="img/37a-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/37a-eastland-CfinalY.jpg" />
 
     {{ breaker() }}
     <h2 class="chapter">The aftermath</h2>
@@ -197,7 +195,7 @@
     <p>By the end of World War II, many Chicagoans knew little to nothing about the disaster. Today, a handful of historical groups are dedicated to preserving artifacts and oral accounts of the survivors and responders. </p>
 
     <p>The last known survivor, Marion Eichholz, died November 24, 2014 at the age of 102. Marion had turned three years old a week earlier when she boarded the Eastland with her mother and father.{{ footnote(12) }}</p>
-    <img class="drawn-panel" src="img/37b-eastland-final.jpg" />
+    <img class="drawn-panel" src="img/37b-eastland-CfinalY.jpg" />
     <!-- <a class='next-button' href="#">
         NEXT:  Stories of survivors
     </a> -->
@@ -214,7 +212,7 @@
 {{ super() }}
 <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/loading.css">
- --><link rel="stylesheet" type="text/css" href="css/styles.css">
+--><link rel="stylesheet" type="text/css" href="css/styles.css">
 {% endblock library_css %}
 
 
