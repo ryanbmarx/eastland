@@ -17,9 +17,11 @@ $aqua: #96C7CC;
 $green: #5A7D7C;
 $light-tan: #F0FFDB;
 $dark-tan: #D3E6A5;
+$photo-module-background: rgba(211, 230, 165, .4);
 $grey: grey;
 $gray: $grey; // b/c somtimes I'm stupid
 $brown:#3B3126;
+$red:#972B29;
 
 // NAV
 $clockheight:57px;
@@ -56,6 +58,7 @@ $clockheight:57px;
 // ######################################
 
 @import "loading-indicator";
+@import "loading.css";
 
 // ######################################
 // BASE
@@ -88,6 +91,29 @@ $clockheight:57px;
 .full-width{
 	padding:0 25px;
 	max-width:1300px;
+}
+
+.warning-graphic-content {
+    display: block;
+    background: url("../img/warning-graphic-content.png") top left no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    max-width: 238px;
+    padding: 10px 0;
+    margin: 15px auto;
+
+    p{
+    	color:$light-tan !important;
+    	margin:0;
+    	padding:0;
+    }
+}
+
+.social-menu {
+    display: block;
+    padding-left: 0;
+    margin: 20px auto 30px auto;
+    max-width: 200px;
 }
 
 hr.breaker{
@@ -208,7 +234,7 @@ img.drawn-panel{
 	margin-top:-80px;
 	transition:margin .2s ease;
 	overflow:hidden;
-	height:77px;
+	// height:77px;
 
 	&.active{
 		margin-top:0;
@@ -231,10 +257,9 @@ img.drawn-panel{
 	}
 	
 	.chapter{
-		padding:0;
+		padding:10px;
 		margin:0;
-		line-height: 2.6em;
-		text-align:left;
+		text-align:center;
 		display:block;
 		color:black;
 	}
@@ -342,7 +367,7 @@ img.drawn-panel{
 	font-weight: bold;
 	color: white;
 	opacity: .85;
-	padding:8% 25px 0 25px;
+	padding:18% 25px 0 25px;
 	text-transform: uppercase;
 	text-shadow: 4px 4px 3px black;
 }
@@ -357,6 +382,7 @@ img.drawn-panel{
 	font-size: 30px;
 	padding-top:0px;
 	line-height: 1em;
+	margin-bottom:0;
 
 }
 
@@ -365,6 +391,8 @@ img.drawn-panel{
 }
 
 .intro-inner{
+	max-width:800px;
+	margin:0 auto;
 	padding:25px;
 
 	p {
@@ -406,9 +434,9 @@ img.drawn-panel{
 
 .eastland-gallery-module{
 	margin:0 auto 35px auto;
-	max-width: 800px;
+	max-width: 900px;
 	padding:25px ;
-	background-color:$dark-tan;
+	background-color:$photo-module-background;
 	border-radius:5px;
 	
 	&:first-child{
@@ -449,15 +477,28 @@ img.drawn-panel{
 	.dek{padding-bottom:8%;}
 }
 
+.page-footer{
+	border-top-color:black;
+	.nav.nav-pills li a{
+		color:black;
+		&:hover{
+			background-color:$dark-tan;
+			border-radius:5px;
+		}
+	}
+	
+}
+
 @media all and (max-width:767px){
 	.newspapers-outer > div {height:350px;}
 	.newspapers-outer > div.splash-text-wrapper{height:auto;}
-	.headline{padding-top:25px;}
+	.headline{padding-top:45px;}
 	.dek{padding-bottom:25px;}
 	.full-width{max-width:100%;padding:0 15px;}
 	.chapter{display:block;}
 	.eastland-button{
-		margin:15px 0 0 0;
+	    margin: 15px auto 0 auto;
+	    display: block;
 	}
 	.eastland-gallery-module{
 		margin:0 auto 35px auto;
@@ -472,7 +513,6 @@ img.drawn-panel{
 
 @media all and (max-width:600px){
 
-	
 	.headline{
 
 		font-size: 45px;
