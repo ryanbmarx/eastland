@@ -281,13 +281,7 @@ img.drawn-panel{
 	.text-wrapper{
 		padding:10px;
 	}
-
-	
 }
-
-// ######################################
-// NEWSPAPERS
-// ######################################
 
 
 // ######################################
@@ -381,7 +375,7 @@ img.drawn-panel{
 }
 
 .headline{
-	padding-top:25px;
+	//padding-top:25px;
 	font-size: 110px;
 	line-height:.8em;
 
@@ -416,23 +410,7 @@ img.drawn-panel{
 	text-align:center;
 }
 
-@media all and (max-width:$laptop){
-	.container{max-width:830px;}
-}
 
-@media all and (max-width:900px){
-	.chapter{display:block;}
-	.headline{
-		padding-top:110px;
-		font-size:80px;
-		text-align:center;
-	}
-
-	.dek{
-		font-size: 30px;
-		text-align:center;
-	}
-}
 
 // ######################################
 // PHOTO GALLERY
@@ -495,13 +473,32 @@ img.drawn-panel{
 	
 }
 
+@media all and (max-width:$laptop){
+	.container{max-width:830px;}
+}
+
+@media all and (max-width:900px){
+//	.chapter{display:block;}
+	.splash-img-wrapper.splash-text-wrapper{
+		&>div{padding: 175px 0 50px 0;}
+
+	.headline{
+		font-size:80px;
+	}
+
+	.dek{
+		font-size: 30px;
+	}
+		}
+}
+
 @media all and (max-width:767px){
 	.newspapers-outer > div {height:350px;}
 	.splash-img-wrapper.splash-text-wrapper{
 		&>div{padding: 100px 0 25px 0;}
+				br{display:none;}
+
 	}
-	.headline{padding-top:45px;}
-	.dek{padding-bottom:25px;}
 	.full-width{max-width:100%;padding:0 15px;}
 	.chapter{display:block;}
 	.eastland-button{
@@ -520,15 +517,11 @@ img.drawn-panel{
 }
 
 @media all and (max-width:600px){
-
-	.headline{
-
-		font-size: 45px;
+	.splash-img-wrapper.splash-text-wrapper{
+		//&>div{padding: 100px 0 25px 0;}
 	}
-
-	.dek{
-
-		font-size: 20px;
-	}
+	.headline{font-size: 45px;}
+	.dek{font-size: 20px;}
+	
 
 }
