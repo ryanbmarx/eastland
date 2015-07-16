@@ -23,14 +23,15 @@
 {% include "_ad-leaderboard.html" %}
 
 
-    <div id="photo-gallery-splash" class="splash-img-wrapper splash-text-wrapper">
-        <div style="width:100%;margin-top: -23px;height: 110%;"  class="imgLiquidFill">
-            <h1 class="splash-fade headline" itemprop="headline">DISASTER ON<br >THE EASTLAND</h1>
-            <h2 class="splash-fade dek">{{ photo_dek }}</h2>
-            <img class='red' src="img/newspapers/intro-red-4.jpg" />
-            <!-- <img src="img/newspapers/splash-faded.jpg" /> -->
-        </div>
-    </div><section id="intro" class="intro-outer">
+<div id="photo-gallery-splash" class="splash-img-wrapper splash-text-wrapper">
+    <div style="width:100%;margin-top: -23px;height: 110%;"  class="imgLiquidFill">
+        <h1 class="splash-fade headline" itemprop="headline">DISASTER ON<br >THE EASTLAND</h1>
+        <h2 class="splash-fade dek">{{ photo_dek }}</h2>
+        <img class='red' src="img/newspapers/intro-red-4.jpg" />
+        <!-- <img src="img/newspapers/splash-faded.jpg" /> -->
+    </div>
+</div>
+<section id="intro" class="intro-outer">
     <div class='container'>
         <div class="intro-inner">
 
@@ -42,24 +43,18 @@
 
             <p class='drop-cap lead'>{{ photo_chatter }}</p>
             {% include "_graphic.html" %}
-<!--             {{ breaker("skinny") }}
+            {{ breaker("skinny") }}
             <div class='eastland-button-wrapper'>
                 <a href="index.html" class='eastland-button'>The Story</a>
                 <a href="eastland-photos.html" class='eastland-button active'>The Photos</a>
             </div>
             {{ breaker("skinny") }}
- --><!--             <div class="byline">
-                <p class="author">By <a itemprop="author" href="mailto:rtuma@chicagotribune.com">Rick Tuma</a> and <a itemprop="author" href="www.twitter.com/ryanmarx">Ryan Marx</a></p>
-                <p class="organization" itemprop="publisher">Chicago Tribune</p>
-                <p class="pub-date" itemprop="datePublished">DATE DATE DATE</p>
-            </div>
- -->
         </div>
     </div>
 </section>
 <section id="photos">
-<div class='container'>
-    {% for row in photos[1:] %}
+    <div class='container'>
+        {% for row in photos[1:] %}
         <div class="eastland-gallery-module {{ row.vert }}">
             <figure>
                 <img src="img/gallery/{{ row.filename }}" />
@@ -69,8 +64,8 @@
 
         </div>
 
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
 </section>
 
 
