@@ -290,18 +290,6 @@ img.drawn-panel{
 // ######################################
 
 
-.newspapers-outer{
-	&>div{
-		height:500px;
-		width:100%;
-		overflow: hidden;
-		border:2px solid black;
-		border-left:none;
-		border-right:none;
-	}
-	
-}
-
 // ######################################
 // LEADERBOARD
 // ######################################
@@ -324,6 +312,18 @@ img.drawn-panel{
 // ######################################
 // INTRO SPLASH
 // ######################################
+
+.newspapers-outer{
+	&>div{
+		height:500px;
+		width:100%;
+		overflow: hidden;
+		border:2px solid black;
+		border-left:none;
+		border-right:none;
+	}
+	
+}
 
 .eastland-button-wrapper{
 	text-align:center;
@@ -361,28 +361,34 @@ img.drawn-panel{
 	}
 
 }
+.splash-img-wrapper.splash-text-wrapper{
+	height:auto;
 
+	&>div{
+    padding: 200px 0 75px 0;
+	}
+}
 .dek, .headline{
 	font-family: $styled-serif;
 	font-weight: bold;
 	color: white;
 	opacity: .85;
-	padding:18% 25px 0 25px;
 	text-transform: uppercase;
 	text-shadow: 4px 4px 3px black;
+	margin: 0 0 0 0;
+    text-align: center;
+    padding:0 50px;
 }
 
 .headline{
-	line-height: 0.8em;
+	padding-top:25px;
 	font-size: 110px;
+	line-height:.8em;
 
 }
 
 .dek{
 	font-size: 30px;
-	padding-top:0px;
-	line-height: 1em;
-	margin-bottom:0;
 
 }
 
@@ -491,7 +497,9 @@ img.drawn-panel{
 
 @media all and (max-width:767px){
 	.newspapers-outer > div {height:350px;}
-	.newspapers-outer > div.splash-text-wrapper{height:auto;}
+	.splash-img-wrapper.splash-text-wrapper{
+		&>div{padding: 100px 0 25px 0;}
+	}
 	.headline{padding-top:45px;}
 	.dek{padding-bottom:25px;}
 	.full-width{max-width:100%;padding:0 15px;}
