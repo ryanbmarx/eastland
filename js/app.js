@@ -31,6 +31,11 @@ var waypointsChapters = $(".chapter").waypoint({
 		}, offset:50
 
 	});
+
+// LAZY LOAD
+$("img.lazy").lazyload({
+    threshold : 400
+});
 	
 // var waypointsSplash = $(".splash-img-wrapper").waypoint({
 // 		handler: function(direction) {
