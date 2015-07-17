@@ -88,9 +88,15 @@ $clockheight:57px;
 
 // .chapter{display:none;}
 
+.drop-cap:first-letter{
+	font-family:$styled-serif;
+	line-height: 125%;
+}
+
 .full-width{
 	padding:0 25px;
 	max-width:1300px;
+	margin: 0 auto;
 }
 
 .warning-graphic-content {
@@ -154,7 +160,7 @@ img.drawn-panel{
 	font-weight:bold;
 	font-family:$sans-serif;
 	font-size: 10px;
-	margin-left: -4px;
+	// margin-left: -4px;
 }
 
 .xout{
