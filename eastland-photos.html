@@ -89,6 +89,14 @@
 <script type="text/javascript" src="js/app.js"></script>
 {% endblock scripts %}
 
+{% block paywall %}
+    {% if PREVIEW_SERVER %}
+        {{ paywall_stage }}
+    {% else %}
+        {{ paywall_prod }}
+    {% endif %}
+{% endblock paywall %}
+
 {% block title %}
 100 years since the Eastland -- Chicago Tribune
 {% endblock title %}
