@@ -24,18 +24,21 @@ var waypointsNAV = $("#chapter1").waypoint({
 
 var waypointsChapters = $(".chapter").waypoint({
 		handler: function(direction) {
+			if (direction == "down"){
 				var newTitle = this.element.innerHTML;
 				$('.eastland-clock-bar-outer .chapter').html(newTitle);
-		}, offset:200
+			}
+		}, offset:50
 
 	});
 	
-var waypointsSplash = $(".splash-img-wrapper").waypoint({
-		handler: function(direction) {
-				$('.fade-splash').fadeIn(2000);
-		}, offset:200
+// var waypointsSplash = $(".splash-img-wrapper").waypoint({
+// 		handler: function(direction) {
+// 				console.log('fading splash');
+// 				$('.fade-splash').fadeIn(2000);
+// 		}, offset:200
 
-	});
+// 	});
 
 });
 
