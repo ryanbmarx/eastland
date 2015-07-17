@@ -90,11 +90,7 @@
 {% endblock scripts %}
 
 {% block paywall %}
-    {% if PREVIEW_SERVER %}
-        {{ paywall_stage }}
-    {% else %}
-        {{ paywall_prod }}
-    {% endif %}
+    {{ paywall_stage }}
 {% endblock paywall %}
 
 {% block title %}
