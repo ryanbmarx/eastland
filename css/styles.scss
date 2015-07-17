@@ -8,7 +8,7 @@ $laptop:1280px;
 
 
 //TYPE
-$styled-serif: "Appareo-ExtraLight", serif;
+$styled-serif: "Appareo-Black", serif;
 $serif: serif;
 $sans-serif: "Helvetica", "Arial", sans-serif;
 
@@ -64,16 +64,6 @@ $clockheight:57px;
 // BASE
 // ######################################
 
-// @font-face {
-// 	font-family: 'Appareo-ExtraLight';
-// 	src: url('appareoextralight.eot');
-// 	src: url('appareoextralight.eot?#iefix') format('embedded-opentype'),
-// 	url('appareoextralight.woff') format('woff'),
-// 	url('appareoextralight.ttf') format('truetype'),
-// 	url('appareoextralight.svg#appareoextralight') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
 
 @font-face {
 	font-family: 'Appareo-ExtraLight';
@@ -82,6 +72,17 @@ $clockheight:57px;
 	url('appareoextralight.woff') format('woff'),
 	url('appareoextralight.ttf') format('truetype'),
 	url('appareoextralight.svg#appareoextralight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Appareo-Black';
+	src: url('appareoblack.eot');
+	src: url('appareoblack.eot?#iefix') format('embedded-opentype'),
+	url('appareoblack.woff') format('woff'),
+	url('appareoblack.ttf') format('truetype'),
+	url('appareoblack.svg#appareoblack') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -100,26 +101,26 @@ $clockheight:57px;
 }
 
 .warning-graphic-content {
-    display: block;
-    background: url("../img/warning-graphic-content.png") top left no-repeat;
-    background-size: 100% 100%;
-    text-align: center;
-    max-width: 238px;
-    padding: 10px 0;
-    margin: 15px auto;
+	display: block;
+	background: url("../img/warning-graphic-content.png") top left no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	max-width: 238px;
+	padding: 10px 0;
+	margin: 15px auto;
 
-    p{
-    	color:$light-tan !important;
-    	margin:0;
-    	padding:0;
-    }
+	p{
+		color:$light-tan !important;
+		margin:0;
+		padding:0;
+	}
 }
 
 .social-menu {
-    display: block;
-    padding-left: 0;
-    margin: 20px auto 30px auto;
-    max-width: 200px;
+	display: block;
+	padding-left: 0;
+	margin: 20px auto 30px auto;
+	max-width: 200px;
 }
 
 hr.breaker{
@@ -367,7 +368,7 @@ img.drawn-panel{
 	height:auto;
 
 	&>div{
-    padding: 200px 0 75px 0;
+		padding: 200px 0 75px 0;
 	}
 }
 .dek, .headline{
@@ -378,12 +379,11 @@ img.drawn-panel{
 	text-transform: uppercase;
 	text-shadow: 4px 4px 3px black;
 	margin: 0 0 0 0;
-    text-align: center;
-    padding:0 50px;
+	text-align: center;
+	padding:0 50px;
 }
 
 .headline{
-	//padding-top:25px;
 	font-size: 110px;
 	line-height:.8em;
 
@@ -486,32 +486,24 @@ img.drawn-panel{
 }
 
 @media all and (max-width:900px){
-//	.chapter{display:block;}
 	.splash-img-wrapper.splash-text-wrapper{
 		&>div{padding: 175px 0 50px 0;}
-
-	.headline{
-		font-size:80px;
 	}
-
-	.dek{
-		font-size: 30px;
-	}
-		}
+	.headline{font-size:80px;}
+	.dek{font-size: 30px;}
 }
 
 @media all and (max-width:767px){
 	.newspapers-outer > div {height:350px;}
 	.splash-img-wrapper.splash-text-wrapper{
 		&>div{padding: 100px 0 25px 0;}
-				br{display:none;}
-
+		br{display:none;}
 	}
 	.full-width{max-width:100%;padding:0 15px;}
 	.chapter{display:block;}
 	.eastland-button{
-	    margin: 15px auto 0 auto;
-	    display: block;
+		margin: 15px auto 0 auto;
+		display: block;
 	}
 	.eastland-gallery-module{
 		margin:0 auto 35px auto;
@@ -525,11 +517,6 @@ img.drawn-panel{
 }
 
 @media all and (max-width:600px){
-	.splash-img-wrapper.splash-text-wrapper{
-		//&>div{padding: 100px 0 25px 0;}
-	}
-	.headline{font-size: 45px;}
+	.headline{font-size: 45px;margin-bottom:7px;}
 	.dek{font-size: 20px;}
-	
-
 }
