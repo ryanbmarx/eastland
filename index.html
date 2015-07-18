@@ -1,12 +1,6 @@
 {% extends "_base.html" %}
 
 
-{% macro graphictext(id, border_caption, classes, ident) %}
-{#######################################}
-{# MACRO GOES HERE #}
-{#######################################}
-{% endmacro %}
-
 {% macro breaker(options) %}
 <hr class='breaker {{ options }}'>
 {% endmacro%}
@@ -198,21 +192,19 @@
 {% endblock content %}
 
 {% block library_css %}
-{{ super() }}
-<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/loading.css">
---><link rel="stylesheet" type="text/css" href="css/styles.css">
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 {% endblock library_css %}
 
 
 {% block scripts %}
-{{ super() }}
-<script type="text/javascript" src="js/pace.min.js"></script>
-<script type="text/javascript" src="js/imgLiquid-min.js"></script>
-<script type="text/javascript" src="js/jquery.lazyload.js"></script>
-<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-<script type="text/javascript" src="js/parallax.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+    {{ super() }}
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <script type="text/javascript" src="js/imgLiquid-min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 {% endblock scripts %}
 
 {% block paywall %}
@@ -220,6 +212,6 @@
 {% endblock paywall %}
 
 {% block title %}
-100 years since the Eastland -- Chicago Tribune
+    {{ site_title }}
 {% endblock title %}
 
