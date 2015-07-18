@@ -14,7 +14,7 @@
 {% include "_loading.html" %}
 
 {% include "_eastland-clock-bar.html" %}
-{% include "_ad-leaderboard.html" %}
+{# include "_ad-leaderboard.html" #}
 
 
 {% include "_splash.html" %}
@@ -28,6 +28,7 @@
                 </div>
             </div>
             {{ main_chatter|process_text() }}
+            {% include "_graphic.html" %}
             {{ breaker("skinny") }}
             <div class='eastland-button-wrapper'>
                 <a href="index.html" class='eastland-button active'>The Story</a>
@@ -51,6 +52,7 @@
 
 
     <h2 class='chapter'>{{ chapter1_hede }}</h2>
+    <p class="xout drop-cap">{{ chapter1_chatter }}</p>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -207,9 +209,9 @@
     <script type="text/javascript" src="js/app.js"></script>
 {% endblock scripts %}
 
-{% block paywall %}
+{# block paywall %}
     {{ paywall_stage }}
-{% endblock paywall %}
+{% endblock paywall #}
 
 {% block title %}
     {{ site_title }}
