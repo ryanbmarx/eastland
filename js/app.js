@@ -1,16 +1,24 @@
 
 $(document).ready(function(){
+	// THIS POWERS THE STATUS BAR
 	Pace.on("done", function(){
+		// WHEN WE HIT 100%, FADE BLACK CURTAIN
 		$('.loading-wrapper').fadeOut(500);
 	});
 
-// MAKE THE NEWSPAPER SECTION DRAWINGS FILL
+	// LAZY LOAD THE GRAPHIC NOVEL IMAGES
+	$("img.lazy").lazyload({
+	    threshold : 400
+	});
+
+// MAKE THE SPLASH SECTION DRAWINGS FILL
     $(".imgLiquidFill").imgLiquid({
         fill: true,
         horizontalAlign: "center",
         verticalAlign: "top"
     });  
  
+// ACTIVATE STICKY BAR 
 var waypointsNAV = $("#chapter1").waypoint({
 		handler: function(direction) {
 			if (direction == "down"){
@@ -19,31 +27,17 @@ var waypointsNAV = $("#chapter1").waypoint({
 				$('.eastland-clock-bar-outer').removeClass('active');
 			}
 		}, offset:200
-
 	});
 
+// CHANGE TEXT ON STICKY BAR
 var waypointsChapters = $(".chapter").waypoint({
 		handler: function(direction) {
-			if (direction == "down"){
+			if (direction == "down" || direction == "up"){
+				console.log("going " + direction)
 				var newTitle = this.element.innerHTML;
 				$('.eastland-clock-bar-outer .chapter').html(newTitle);
 			}
 		}, offset:50
-
 	});
-
-// LAZY LOAD
-$("img.lazy").lazyload({
-    threshold : 400
-});
-	
-// var waypointsSplash = $(".splash-img-wrapper").waypoint({
-// 		handler: function(direction) {
-// 				console.log('fading splash');
-// 				$('.fade-splash').fadeIn(2000);
-// 		}, offset:200
-
-// 	});
-
 });
 
