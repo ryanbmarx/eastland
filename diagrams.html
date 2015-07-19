@@ -17,10 +17,10 @@
 {% include "_ad-leaderboard.html" %}
 
 
-<div id="photo-gallery-splash" class="splash-img-wrapper splash-text-wrapper">
-    <div style="width:100%;margin-top: -23px;height: 110%;"  class="imgLiquidFill">
-        <h1 class="splash-fade headline" itemprop="headline">{{ main_headline|process_text() }}</h1>
-        <h2 class="splash-fade dek">need a grafx hed</h2>
+<div id="graphics-splash" class="splash-img-wrapper splash-text-wrapper">
+    <div style="width:100%;height: 100%;"  class="imgLiquidFill">
+        <h1 class="headline" itemprop="headline">{{ main_headline|process_text() }}</h1>
+        <h2 class="dek">need a grafx hed</h2>
         <img class='red' src="img/newspapers/intro-red-4.jpg" />
     </div>
 </div>
@@ -34,13 +34,13 @@
                 </div>
             </div>
 
-            <p class='drop-cap lead'>{{ photo_chatter }}</p>
-            {% include "_graphic.html" %}
+            <p class='drop-cap lead'>Need chatter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestiae voluptate alias inventore eum expedita libero eaque, minus tenetur laborum eius animi debitis est perspiciatis sunt fuga, cupiditate, in aliquam!</p>
             {{ breaker("skinny") }}
             <div class='eastland-button-wrapper'>
-                <a href="index.html" class='eastland-button'>The Story</a>
-                <a href="eastland-photos.html" class='eastland-button'>The Photos</a>
-                <a href="eastland-photos.html" class='eastland-button active'>The Diagrams</a>
+                <a href="index.html" class='eastland-button'>Story</a>
+                <a href="eastland-photos.html" class='eastland-button'>Photos</a>
+                <a href="diagrams.html" class='eastland-button active'>Diagrams</a>
+                <a href="about.html" class='eastland-button'>About</a>
             </div>
             {{ breaker("skinny") }}
         </div>
@@ -48,6 +48,38 @@
 </section>
 <section id="graphics">
     <div class='container'>
+        <section id="map">
+            <h2 class='chapter'>Where the Eastland was parked</h2>
+            <p class='drop-cap'>In 1915, the Chicago River was a parking lot of ships. The Eastland was just one of more than a dozen other vessels in that waterway.</p>
+            <div class='row'>
+                <img class="drawn-panel" src="river-map-diagramCY.jpg" alt="Hand-drawn map of the Chicago River"/>
+            </div>
+        </section>
+        {{ breaker() }}
+        <section id="roll">
+            <h2 class='chapter'>How the Eastland rolled</h2>
+            <p class='drop-cap'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sit tempora enim dolores voluptatem maiores amet est ex aspernatur repellendus autem, officiis odit culpa eligendi rerum similique esse fugiat assumenda.</p>
+            <div class='row'>
+                <img class="drawn-panel" src="river-map-diagramCY.jpg" alt="Hand-drawn map of the Chicago River"/>
+            </div>
+        </section>
+        {{ breaker() }}
+        <section id="raising">
+            <h2 class='chapter'>Raising the fallen ship</h2>
+            <p class='drop-cap'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores modi saepe eos ex illum, aspernatur sit ad quam numquam molestias, culpa doloremque rem ipsum ab tempora. Obcaecati nemo accusamus iure.</p>
+            <div class='row'>
+                <img class="drawn-panel" src="raising-eastland-cartoonCY.jpg" alt="Vintage clipping from the Chicago Daily Tribune"/>
+            </div>
+        </section>
+        {{ breaker() }}
+        <section id="victims">
+            <h2 class='chapter'>Counting the victims</h2>
+            <p class='drop-cap'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores modi saepe eos ex illum, aspernatur sit ad quam numquam molestias, culpa doloremque rem ipsum ab tempora. Obcaecati nemo accusamus iure.</p>
+            <div class='row'>
+                <img class="drawn-panel" src="XXXXX" alt="Vintage clipping from the Chicago Daily Tribune"/>
+            </div>
+        </section>
+        {{ breaker() }}
     </div>
 </section>
 
@@ -64,19 +96,19 @@
 
 {% block scripts %}
 {{ super() }}
-    <script type="text/javascript" src="js/pace.min.js"></script>
-    <script type="text/javascript" src="js/imgLiquid-min.js"></script>
-    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
-    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="js/parallax.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/pace.min.js"></script>
+<script type="text/javascript" src="js/imgLiquid-min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/parallax.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 {% endblock scripts %}
 
 {# block paywall %}
-    {{ paywall_stage }}
+{{ paywall_stage }}
 {% endblock paywall #}
 
 {% block title %}
-    {{ site_title }}
+{{ site_title }}
 {% endblock title %}
 
