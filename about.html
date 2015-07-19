@@ -1,0 +1,81 @@
+{% extends "_base.html" %}
+
+
+{% macro breaker(options) %}
+<hr class='breaker {{ options }}'>
+{% endmacro%}
+
+{% macro footnote(number) %}
+<sup class="footnote">{{ number }}</sup>
+{% endmacro%}
+
+
+{% block content %}
+
+{% include "_loading.html" %}
+
+{% include "_ad-leaderboard.html" %}
+
+
+<div id="graphics-splash" class="splash-img-wrapper splash-text-wrapper">
+    <div style="width:100%;height: 100%;"  class="imgLiquidFill">
+        <h1 class="headline" itemprop="headline">{{ main_headline|process_text() }}</h1>
+        <h2 class="dek">About this project</h2>
+        <img class='red' src="img/newspapers/intro-red-4.jpg" />
+    </div>
+</div>
+<section id="intro" class="intro-outer">
+    <div class='container'>
+        <div class="intro-inner">
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% include "_social_row.html" %}
+                </div>
+            </div>
+            {{ breaker("skinny") }}
+            <div class='eastland-button-wrapper'>
+                <a href="index.html" class='eastland-button'>Story</a>
+                <a href="eastland-photos.html" class='eastland-button'>Photos</a>
+                <a href="diagrams.html" class='eastland-button'>Diagrams</a>
+                <a href="about.html" class='eastland-button active'>About</a>
+            </div>
+            {{ breaker("skinny") }}
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class='container'>
+        <h2 class='chapter'>About this project</h2>
+        <p class=''>Need chatter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestiae voluptate alias inventore eum expedita libero eaque, minus tenetur laborum eius animi debitis est perspiciatis sunt fuga, cupiditate, in aliquam!</p>
+        <p class=''>Need chatter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestiae voluptate alias inventore eum expedita libero eaque, minus tenetur laborum eius animi debitis est perspiciatis sunt fuga, cupiditate, in aliquam!</p>
+        <p class=''>Need chatter. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestiae voluptate alias inventore eum expedita libero eaque, minus tenetur laborum eius animi debitis est perspiciatis sunt fuga, cupiditate, in aliquam!</p>     
+    </div>
+</section>
+
+
+
+
+{% endblock content %}
+
+{% block library_css %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+{% endblock library_css %}
+
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="js/pace.min.js"></script>
+<script type="text/javascript" src="js/imgLiquid-min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+{% endblock scripts %}
+
+{# block paywall %}
+    {{ paywall_stage }}
+{% endblock paywall #}
+
+{% block title %}
+    {{ site_title }}
+{% endblock title %}
+
