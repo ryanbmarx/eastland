@@ -8,16 +8,16 @@ $(document).ready(function(){
 
 	// LAZY LOAD THE GRAPHIC NOVEL IMAGES
 	$("img.lazy").lazyload({
-	    threshold : 400
+		threshold : 400
 	});
 
 // MAKE THE SPLASH SECTION DRAWINGS FILL
-    $(".imgLiquidFill").imgLiquid({
-        fill: true,
-        horizontalAlign: "center",
-        verticalAlign: "top"
-    });  
- 
+$(".imgLiquidFill").imgLiquid({
+	fill: true,
+	horizontalAlign: "center",
+	verticalAlign: "top"
+});  
+
 // ACTIVATE STICKY BAR 
 // ****** LET'S HOLD THIS FOR NOW
 // var waypointsNAV = $("#chapter1").waypoint({
@@ -31,14 +31,14 @@ $(document).ready(function(){
 // 	});
 
 // CHANGE TEXT ON STICKY BAR
-var waypointsChapters = $(".chapter").waypoint({
-		handler: function(direction) {
-			if (direction == "down" || direction == "up"){
-				console.log("going " + direction)
-				var newTitle = this.element.innerHTML;
-				$('.eastland-clock-bar-outer .chapter').html(newTitle);
-			}
-		}, offset:50
-	});
+// var waypointsChapters = $(".chapter").waypoint({
+// 		handler: function(direction) {
+// 			if (direction == "down" || direction == "up"){
+// 				console.log("going " + direction)
+// 				var newTitle = this.element.innerHTML;
+// 				$('.eastland-clock-bar-outer .chapter').html(newTitle);
+// 			}
+// 		}, offset:50
+// 	});
+// });
 });
-
