@@ -50,7 +50,7 @@
 
 
     <h2 class='chapter'>{{ chapter1_hede }}</h2>
-    <p class="xout drop-cap">{{ chapter1_chatter }}</p>
+    <p class="drop-cap">{{ chapter1_chatter|process_text() }}</p>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -124,7 +124,7 @@
         </div>  
     </div>
     <h4>{{ chapter4_hede }}</h4>
-    <p class="drop-cap">{{ chapter4_chatter}}</p>
+    <p class="drop-cap">{{ chapter4_chatter|process_text() }}</p>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
@@ -155,10 +155,10 @@
 <div class='container'>
     {{ breaker() }}
     <h2 class='chapter'>{{ chapter5_hede }}</h2>
-    <p class="drop-cap">{{ chapter5_chatter_01|process_text() }}{{ footnote(8) }}</p>
+    <p class="drop-cap">{{ chapter5_chatter_01|process_text() }}{{ footnote(9) }}</p>
     <img class="drawn-panel lazy" data-original="img/std/30-eastland-CfinalY.jpg" />
 
-    <p class='drop-cap'>{{ chapter5_chatter_02|process_text() }}{{ footnote(9) }}</p> 
+    <p class='drop-cap'>{{ chapter5_chatter_02|process_text() }}{{ footnote(10) }}</p> 
     <img class="drawn-panel lazy" data-original="img/std/31-eastland-CfinalY.jpg" />
     <h2 class='chapter'>{{ chapter6_hede }}</h2>
     <p class="drop-cap">{{ chapter6_chatter_01|process_text() }}</p>
@@ -170,23 +170,20 @@
     <img class="drawn-panel lazy" data-original="img/std/35-eastland-CfinalY.jpg" />
     {{ breaker() }}
     <h2 class='chapter'>{{ chapter7_hede }}</h2>
-    <p class="drop-cap">{{ chapter7_chatter_01|process_text() }}{{ footnote(8) }}</p>
+    <p class="drop-cap">{{ chapter7_chatter_01|process_text() }}{{ footnote(16) }}</p>
 
     <img class="drawn-panel lazy" data-original="img/std/36-eastland-CfinalY.jpg" />
 
-    <p class="drop-cap">{{ chapter7_chatter_02|process_text() }}{{ footnote(10) }}</p>
-    <p>Wednesday, July 28, 1915 was the day that the majority of the victims were laid to rest.{{ footnote("needone")}}</p>
+    <p class="drop-cap">{{ chapter7_chatter_02|process_text() }}{{ footnote(18) }}</p>
+    <p>Wednesday, July 28, 1915 was the day that the majority of the victims were laid to rest.{{ footnote("19")}}</p>
     <img class="drawn-panel lazy" data-original="img/std/37a-eastland-CfinalY.jpg" />
 
     {{ breaker() }}
     <h2 class='chapter'>{{ chapter8_hede }}</h2>
-    <p class="drop-cap">{{ chapter8_chatter|process_text() }}{{ footnote(12) }}</p>
+    <p class="drop-cap">{{ chapter8_chatter|process_text() }}{{ footnote(20) }}</p>
     <img class="drawn-panel lazy" data-original="img/std/37b-eastland-CfinalY.jpg" />
     {{ breaker() }}
     {% include "_footnotes.html" %}
-
-
-
 </div>
 
 {% endblock content %}

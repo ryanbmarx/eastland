@@ -200,13 +200,14 @@ img.drawn-panel{
 
 #footnotes{
 	a{
-		color:white;
+		// color:white;
 		text-decoration: none;
-		border-bottom:5px solid $aqua;
+		// border-bottom:5px solid $aqua;
 	}
 	a:hover, a:focus, {
-		background-color:$aqua;
-		padding-top: 5px;
+		// background-color:$aqua;
+		// padding-top: 5px;
+		text-decoration:underline;
 	}
 
 	dl{
