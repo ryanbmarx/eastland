@@ -19,15 +19,16 @@ $(document).ready(function(){
     });  
  
 // ACTIVATE STICKY BAR 
-var waypointsNAV = $("#chapter1").waypoint({
-		handler: function(direction) {
-			if (direction == "down"){
-				$('.eastland-clock-bar-outer').addClass('active');
-			} else {
-				$('.eastland-clock-bar-outer').removeClass('active');
-			}
-		}, offset:200
-	});
+// ****** LET'S HOLD THIS FOR NOW
+// var waypointsNAV = $("#chapter1").waypoint({
+// 		handler: function(direction) {
+// 			if (direction == "down"){
+// 				$('.eastland-clock-bar-outer').addClass('active');
+// 			} else {
+// 				$('.eastland-clock-bar-outer').removeClass('active');
+// 			}
+// 		}, offset:200
+// 	});
 
 // CHANGE TEXT ON STICKY BAR
 var waypointsChapters = $(".chapter").waypoint({
