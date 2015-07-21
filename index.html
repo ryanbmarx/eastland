@@ -30,10 +30,8 @@
             {{ main_chatter|process_text() }}
             {% include "_graphic.html" %}
             {{ breaker("skinny") }}
-            <div class='eastland-button-wrapper'>
-                <a href="index.html" class='eastland-button active'>The Story</a>
-                <a href="eastland-photos.html" class='eastland-button'>The Photos</a>
-            </div>
+            {% set active_page = "novel" %}
+            {% include "_buttons.html" %}
             {{ breaker("skinny") }}
             <div class="byline">
                 <p class="author">By <a itemprop="author" href="mailto:rtuma@chicagotribune.com">Rick Tuma</a> and <a itemprop="author" href="www.twitter.com/ryanmarx">Ryan Marx</a></p>

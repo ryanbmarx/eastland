@@ -39,10 +39,8 @@
             <p class='drop-cap lead'>{{ photo_chatter }}</p>
             {% include "_graphic.html" %}
             {{ breaker("skinny") }}
-            <div class='eastland-button-wrapper'>
-                <a href="index.html" class='eastland-button'>The Story</a>
-                <a href="eastland-photos.html" class='eastland-button active'>The Photos</a>
-            </div>
+            {% set active_page = "photos" %}
+            {% include "_buttons.html" %}
             {{ breaker("skinny") }}
         </div>
     </div>
@@ -83,9 +81,9 @@
 <script type="text/javascript" src="js/app.js"></script>
 {% endblock scripts %}
 
-{% block paywall %}
+{# block paywall %}
     {{ paywall_stage }}
-{% endblock paywall %}
+{% endblock paywall #}
 
 {% block title %}
     {{ site_title }}
