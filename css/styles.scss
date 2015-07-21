@@ -428,7 +428,10 @@ img.drawn-panel{
 	text-align:center;
 }
 
-
+#intro a{
+	color:$red; 
+	font-weight:bold;
+}
 
 // ######################################
 // PHOTO GALLERY
@@ -497,7 +500,6 @@ img.drawn-panel{
 
 #about .image-wrapper{
 	background-color: $light-tan;
-    border: 3px solid $light-tan;
     border-radius: 5px;
     overflow: hidden;
     // width: 125px;
