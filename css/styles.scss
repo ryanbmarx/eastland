@@ -87,6 +87,14 @@ $clockheight:57px;
 	font-style: normal;
 }
 
+a{
+	color:$dark-tan;
+}
+
+a:hover, a:focus {
+	color:$dark-tan;
+}
+
 // .chapter{display:none;}
 
 .drop-cap:first-letter{
