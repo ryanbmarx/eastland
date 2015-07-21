@@ -482,6 +482,32 @@ img.drawn-panel{
 	
 }
 
+// ######################################
+// ABOUT PAGE
+// ######################################
+
+#about .image-wrapper{
+	background-color: $light-tan;
+    border: 3px solid $light-tan;
+    border-radius: 5px;
+    overflow: hidden;
+    // width: 125px;
+    // height: 125px;
+    margin:15px auto 5px auto;
+
+    &:first-child{
+    	margin-top:0;
+    }
+}
+
+#portraits{
+	text-align:center;
+}
+
+// ######################################
+// MEDIA QUERIES
+// ######################################
+
 @media all and (max-width:$laptop){
 	.container{max-width:830px;}
 }
@@ -515,6 +541,13 @@ img.drawn-panel{
 			color:$light-tan;
 		}
 	}
+	#about .image-wrapper{
+		max-width: 200px;
+
+	    &:first-child{
+	    	margin-top:15px;
+	    }
+}
 }
 
 @media all and (max-width:600px){
