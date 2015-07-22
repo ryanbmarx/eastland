@@ -428,9 +428,22 @@ img.drawn-panel{
 	text-align:center;
 }
 
-#intro a{
+#intro a{ 
+	color:black;
+
+	&:hover, &:focus{
+		color:black;
+	}
+}
+
+#intro a.red {
 	color:$red; 
 	font-weight:bold;
+
+
+	&:hover, &:focus  {
+		color:$red; 
+	}
 }
 
 // ######################################
