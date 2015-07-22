@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	// LAZY LOAD THE GRAPHIC NOVEL IMAGES
 	$("img.lazy").lazyload({
-		threshold : 400
+		threshold : 600
 	});
 
 // MAKE THE SPLASH SECTION DRAWINGS FILL
