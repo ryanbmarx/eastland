@@ -65,6 +65,9 @@ $clockheight:57px;
 // ######################################
 
 
+// This fixes a quirk in the modal CSS
+.reg-hack p { color: #131313; }
+
 @font-face {
 	font-family: 'Appareo-ExtraLight';
 	src: url('appareoextralight.eot');
